@@ -310,7 +310,7 @@ class _SearchScreenState extends State<SearchScreen> {
               onChanged: _onSearchChanged,
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
-                hintText: 'Nhập từ khoá...',
+                hintText: 'Enter the keyword...',
                 border: const OutlineInputBorder(),
                 prefixIcon: const Icon(Icons.search),
                 suffixIcon: Row(
@@ -545,7 +545,7 @@ class _FeaturedHome extends StatelessWidget {
         if (tfa != null) ...[
           const Padding(
             padding: EdgeInsets.fromLTRB(4, 4, 4, 8),
-            child: Text('Bài viết chọn lọc hôm nay',
+            child: Text('Today featured articles: ',
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
           ),
           _FeaturedCard(item: tfa, onTap: () => onOpenArticle(tfa.title)),
@@ -554,7 +554,7 @@ class _FeaturedHome extends StatelessWidget {
         if (most.isNotEmpty) ...[
           const Padding(
             padding: EdgeInsets.fromLTRB(4, 4, 4, 8),
-            child: Text('Đọc nhiều nhất hôm nay',
+            child: Text('Today most read articles: ',
                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16)),
           ),
           ...most.map((e) =>
